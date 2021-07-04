@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Class-01</title>
     
+    <style>
+        h1{
+            color: darkgray;
+            background-color: darkcyan;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>Class 1 Lab</h1>
+        <p style="color: darksalmon; background-color: midnightblue;">
+            "what is your name ?"
+        </p>
+        
+        <p style="color:palegoldenrod; background-color:seagreen;">
+            "what is your favourite animal of these (zebra🦓, lion🦁, elephant🐘) "
+        </p>
+
+        <p style="color:white; background-color:purple;">
+            "how many stars would rate our ZOO 1 - 5 stars?"
+        </p>
+
+        <p style="color:salmon; background-color:rebeccapurple;">
+            "what is your favourite color ?"
+        </p>
+
+    </main>
+
+    <footer>
+        <script>
+            //name box prompt
+            let name = prompt("what is your name ?")
+            nameValidate(name);
+            function nameValidate(name) {
+                while (name.length < 1 || name == null) {
+                    var name = prompt("what is your name ?")
+                }
+                alert("Welcome to the ZOO " + name + " 😊..!")
+            }
+            console.log("what is your name ?" + name);
+
+            //favourite animal prompt
+            let fav = prompt("what is your favourite animal of these (zebra🦓, lion🦁, elephant🐘) " + name + "?")
+            animalValidate(fav);
+            function animalValidate(fav) {
+                while (fav !== "zebra" && fav !== "lion" && fav !== "elephant") {
+                    fav = prompt("what is your favourite animal of these (zebra🦓, lion🦁, elephant🐘) " + name + "?")
+                }
+                if (fav == "zebra" || fav == "lion" || fav == "elephant") {
+                    alert("Nice Favourite Animal you can come see " + fav + " in our ZOO " + name + " 😊..!")
+                }
+                else {
+                    alert("sorry we don't have your animal " + name + "🙁..!")
+                }
+            }
+            console.log("what is your favourite animal of these (zebra🦓, lion🦁, elephant🐘) " + name + "?" + fav);
+
+
+            //rating prompt            
+            let counterstars = parseInt(prompt("how many stars would rate our ZOO 1 - 5 stars?"));
+            rateValidate(counterstars);
+            function rateValidate(counterstars) {
+                while (counterstars > 5 || counterstars == null) {
+                    counterstars == 0
+                    counterstars = prompt("how many stars would rate us 1 - 5 stars?");
+                }
+
+                prompt("Thanks For Rating Us " + counterstars + "⭐s");
+            }
+            console.log("how many stars would rate our ZOO 1 - 5 stars?" + counterstars)
+
+
+            //color box prompt
+            let mycolor = prompt("what is your favourite color ?")
+            prompt("wow 😮 what a great color you choose " + mycolor)
+            console.log("what is your favourite color ?" + mycolor);
+
+        </script>
+    </footer>
+
 </body>
+
 </html>
